@@ -1,26 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Webprojekt_1_Bauhandel.Models;
 
 namespace Webprojekt_1_Bauhandel.Controllers
 {
-    public class HomeController : Controller
+    public class UserController : Controller
     {
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
-
-        public ActionResult AboutUs()
+        public ActionResult Login()
         {
             return View();
         }
-        public ActionResult Impressum()
+        public ActionResult Register()
         {
             return View();
         }

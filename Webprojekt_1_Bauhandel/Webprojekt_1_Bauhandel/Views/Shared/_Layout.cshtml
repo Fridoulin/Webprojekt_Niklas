@@ -8,19 +8,26 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
+    <div id="container">
+        <header>
+            <div class="Baumarkt">
+                <p> Baumarkt GmBH</p>
+            </div>
+        </header>
+        <main>
+            <nav>
+                <partial name="Navigation" />
+            </nav>
+            <content>
+                @RenderBody()
+            </content>
+        </main>
+        <footer>
 
+            <partial name="Fußzeile" />
+        </footer>
+    </div>
 
-
-
-@RenderBody()
-
-
-
-
-
-
-
-       
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
