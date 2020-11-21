@@ -3,5 +3,60 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>Register</h1>
 
+
+    <form name="Eingabe">
+        <table border="0" cellspacing="0" cellpadding="2">
+            <tbody>
+                <h5 class="card-title text-center">Registrierung</h5>
+                <tr>
+                    <td>Anrede:</td>
+                    <td>
+                        <input checked="checked" name="Anrede" type="radio" value="Herr" /> Herr
+                    <input name="Anrede" type="radio" value="Frau" /> Frau
+                </td>
+                </tr>
+                <tr>
+                    <td>Vorname:</td>
+                    <td>
+                        <input maxlength="50" name="Vorname" size="45" type="text" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nachname:</td>
+                    <td>
+                        <input name="Nachname" size="45" type="text" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>
+                        <input name="Email" size="45" type="text" name="Email" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email bestätigen:</td>
+                    <td>
+                        <input name="Email bestätigen" size="45" type="text" name="EmailCheck" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Passwort:</td>
+                    <td>
+                        <input name="Passwort" size="45" type="password" ß required />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Passwort bestätigen:</td>
+                    <td>
+                        <input name="Passwort bestätigen" size="45" type="password" required />
+                    </td>
+                </tr>
+                <td>
+                    <input type="submit" asp-controller="user" asp-action="index" value="Anmelden" />
+                </td>
+        </tr >
+        </tbody >
+    </table >
+
+</form >
