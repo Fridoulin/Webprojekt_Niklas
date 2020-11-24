@@ -3,5 +3,40 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+@if ((Model == null) || (Model.Count == 0))
+{
+    <p>
+        Es sind keine Artikel im Shop vorhanden!
+    </p>
+}
+else
+{
+    // alle Artike in Tabellenform ausgeben
+    <table>
+        <thead>
+            <tr>
+                <td colspan="5">Prodkute</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Bezeichnung</td>
+                <td>Beschreibung</td>
+                <td>Typ</td>
+                <td>Art</td>
+            </tr>
+            @foreach (Shoparticle a in Model)
+            {
+                <tr>
+                    <td>@a.Name</td>
+                    <td>@a.Price</td>
+                    <td>@a.Description</td>
+                    <td>@a.Art</td>
+                    <td>@a.Category</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
 
